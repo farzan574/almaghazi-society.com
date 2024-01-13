@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+   body{
+    background-color:aqua;
+    color:darkblue;
+   }
+p {
+  
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.home{
+    text-align: center;
+    font-style: oblique;
+    font-size: 50px;
+}
+.c{
+    text-align: center;
+    font-size: 30px;
+    
+}
+</style>
+</head>
+<body>
+    <div class="home">
+        <h4>
+            Get 50% discount if you know Farzan <br> Don't Waste your time offer is limited
+        </h4>
+    </div>
+<p id="demo"></p>
+
+<script>
+
+var countDownDate = new Date("july 5, 2023 15:37:25").getTime();
+
+
+var x = setInterval(function() {
+  var now = new Date().getTime();
+    
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<div class="c">
+    <li><a href="Project/index.html">Click here to go back </a></li>
+</div>
+
+</body>
+</html>
